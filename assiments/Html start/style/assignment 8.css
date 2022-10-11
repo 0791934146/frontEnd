@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body{
     margin: 0;
 }
@@ -5,19 +8,23 @@ body{
     display: flex;
 }
 .sideNav{
-    width: 30%;
-    max-width: 200px;
-    height:calc(100vh - 40px);
+    height:100vh;
     padding: 20px;
     font-size: 20px;
     background-color: rgb(227, 48, 95);
     overflow-y: auto;
     overflow-x: hidden;
+    max-width: 250px;
+    min-width: 150px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0px;
 }
 .sideNav nav{
     display: flex;
     flex-direction: column;
     gap: 8px;
+    flex: auto;
 }
 .items{
     background-color: aqua;
@@ -25,9 +32,11 @@ body{
     text-decoration: none;
 }
 .content{
-    width: 60%;
-    height: calc(100vh - 40px);
+    height: 100vh;
     padding: 20px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0px;
     background-color: aquamarine;
     overflow: auto;
 }
@@ -40,5 +49,8 @@ justify-content: center;
 }
 .cards{
     background-color: darkgrey;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100px;
     height: 100px;
-    width: 25%;}
+}
